@@ -1,0 +1,6 @@
+{
+  "minify": true,
+  "env": {
+    "target": "es5"
+  }
+}
