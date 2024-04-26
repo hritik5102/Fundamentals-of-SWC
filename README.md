@@ -30,7 +30,7 @@ SWC (Speedy Web Compiler) is known for its speed because of its different approa
 
 ## Let's see how SWC as bundler works
 
-## Create a two sample file
+#### Create a two sample file
 
 src/logger.js
 
@@ -57,49 +57,49 @@ class Application {
 Application.main();
 ```
 
-## Install SWC core and cli
+### Install SWC core and cli
 
 ```bash
 $ npm i -D @swc/core @swc/cli 
 ```
 
-## Compile a file 
+### Compile a file 
 
 ```bash
 $ npx swc ./src/index.js
 ```
 
-## Save the output in a seperate output file
+### Save the output in a seperate output file
 
 ```bash
 $ npx swc ./src/index.js -o ./output.js
 ```
 
-## Provide an output directory
+### Provide an output directory
 
 ```bash
 $ npx swc ./src/index.js -d ./dist
 ```
 
-## You can include all the javascript as entry using CLI
+### You can include all the javascript as entry using CLI
 
 ```bash
 $ npx swc ./src/*.js -d ./dist
 ```
 
-## If you want to watch for changes in the file, you can install chokidar dev dependancy
+### If you want to watch for changes in the file, you can install chokidar dev dependancy
 
 ```bash
 $ npm i -D chokidar
 ```
 
-## Watch for changes ( it will thrown an error if you did not install a package )
+### Watch for changes ( it will thrown an error if you did not install a package )
 
 ```bash
 $ npx swc ./src/index.js -d ./dist -w
 ```
 
-## Create a .swcrc file
+### Create a .swcrc file
 
 .swcrc
 
@@ -111,13 +111,13 @@ $ npx swc ./src/index.js -d ./dist -w
 
 Check other configuration in SWC: https://swc.rs/docs/configuration/swcrc
 
-## Again use the above command
+### Again use the above command
 
 ```bash
 $ npx swc ./src/index.js -d ./dist -w
 ```
 
-## You can also specify the target here
+### You can also specify the target here
 
 .swcrc
 
@@ -165,9 +165,12 @@ Note: it will thrown an error if provide a `"type": "module",` in your package.j
 
 The error will look something like this: 
 ```
-spack.config.js is treated as an ES module file as it is a .js file whose nearest parent package.json contains "type": "module" which declares all .js files in that package scope as ES modules.
+spack.config.js is treated as an ES module file as it is a .js file whose nearest parent 
+package.json contains "type": "module" which declares all .js files in that package scope as ES modules.
 
-Instead rename spack.config.js to end in .cjs, change the requiring code to use dynamic import() which is available in all CommonJS modules, or change "type": "module" to "type": "commonjs" in package.json to treat all .js files as CommonJS (using .mjs for all ES modules instead).
+Instead rename spack.config.js to end in .cjs, change the requiring code to use dynamic 
+import() which is available in all CommonJS modules, or change "type": "module" to 
+"type": "commonjs" in package.json to treat all .js files as CommonJS (using .mjs for all ES modules instead).
 ```
 
 ## SWC Plugins
