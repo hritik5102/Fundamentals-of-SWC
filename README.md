@@ -30,9 +30,9 @@ SWC (Speedy Web Compiler) is known for its speed because of its different approa
 
 ## Let's see how SWC as bundler works
 
-#### Create a two sample file
+### Create a two sample file
 
-src/logger.js
+`src/logger.js`
 
 ```js
 class Logger {
@@ -43,7 +43,7 @@ class Logger {
 
 export default Logger;
 ```
-src/index.js
+`src/index.js`
 
 ```js
 import Logger from "./logger";
@@ -101,7 +101,7 @@ $ npx swc ./src/index.js -d ./dist -w
 
 ### Create a .swcrc file
 
-.swcrc
+`.swcrc`
 
 ```json
 {
@@ -119,7 +119,7 @@ $ npx swc ./src/index.js -d ./dist -w
 
 ### You can also specify the target here
 
-.swcrc
+`.swcrc`
 
 ```json
 {
@@ -138,7 +138,8 @@ This feature is currently named spack, but will be renamed to swcpack in v2. spa
 
 Ref: https://swc.rs/docs/configuration/bundling
 
-spack.config.js
+`spack.config.js`
+
 ```js
 const { config } = require("@swc/core/spack");
 
@@ -158,6 +159,7 @@ module.exports = config({
 ```
 
 Run using
+
 ```bash
 $ npx spack
 ```
